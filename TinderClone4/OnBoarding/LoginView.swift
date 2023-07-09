@@ -4,6 +4,7 @@ import FirebaseAuth
 struct LoginView: View {
     @Binding var currentShowingView: String
     @AppStorage("uid") var userID: String = ""
+    @AppStorage("UIBool") var userInfoBool: Bool = false
     
     @State private var email: String = ""
     @State private var password: String = ""
@@ -95,6 +96,7 @@ struct LoginView: View {
                         }
                         
                         if let authResult = authResult {
+                            userInfoBool = true
                             print(authResult.user.uid)
                             withAnimation {
                                 userID = authResult.user.uid

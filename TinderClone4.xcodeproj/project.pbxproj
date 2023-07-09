@@ -21,7 +21,16 @@
 		5E8C01A22A55FEBC008408EB /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01A12A55FEBC008408EB /* SignupView.swift */; };
 		5E8C01A42A56114F008408EB /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01A32A56114F008408EB /* UserInfo.swift */; };
 		5E8C01A72A5629BB008408EB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5E8C01A62A5629BB008408EB /* FirebaseFirestore */; };
-		5E8C01A92A562D16008408EB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01A82A562D16008408EB /* ImagePicker.swift */; };
+		5E8C01AB2A57CA4E008408EB /* ImageUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01AA2A57CA4E008408EB /* ImageUpload.swift */; };
+		5E8C01AD2A57CACB008408EB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5E8C01AC2A57CACB008408EB /* FirebaseStorage */; };
+		5E8C01B22A5863C4008408EB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01B12A5863C4008408EB /* CardView.swift */; };
+		5E8C01B42A586424008408EB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01B32A586424008408EB /* Card.swift */; };
+		5E8C01B62A586CC4008408EB /* IMG_5263.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 5E8C01B52A586CC4008408EB /* IMG_5263.JPG */; };
+		5E8C01B82A58ADFD008408EB /* CardsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01B72A58ADFD008408EB /* CardsSection.swift */; };
+		5E8C01BA2A58BA83008408EB /* RetrieveUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01B92A58BA83008408EB /* RetrieveUser.swift */; };
+		5E8C01BF2A58D407008408EB /* RightSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01BE2A58D407008408EB /* RightSwipe.swift */; };
+		5E8C01C12A593D91008408EB /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01C02A593D91008408EB /* MatchesView.swift */; };
+		5E8C01C92A5B35AA008408EB /* NavigationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01C82A5B35AA008408EB /* NavigationSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +44,15 @@
 		5E8C019F2A55FE64008408EB /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		5E8C01A12A55FEBC008408EB /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		5E8C01A32A56114F008408EB /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		5E8C01A82A562D16008408EB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		5E8C01AA2A57CA4E008408EB /* ImageUpload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUpload.swift; sourceTree = "<group>"; };
+		5E8C01B12A5863C4008408EB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		5E8C01B32A586424008408EB /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		5E8C01B52A586CC4008408EB /* IMG_5263.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_5263.JPG; path = ../../../Downloads/IMG_5263.JPG; sourceTree = "<group>"; };
+		5E8C01B72A58ADFD008408EB /* CardsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsSection.swift; sourceTree = "<group>"; };
+		5E8C01B92A58BA83008408EB /* RetrieveUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveUser.swift; sourceTree = "<group>"; };
+		5E8C01BE2A58D407008408EB /* RightSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSwipe.swift; sourceTree = "<group>"; };
+		5E8C01C02A593D91008408EB /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
+		5E8C01C82A5B35AA008408EB /* NavigationSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +65,7 @@
 				5E8C01962A55F9D3008408EB /* FirebaseAnalytics in Frameworks */,
 				5E8C01A72A5629BB008408EB /* FirebaseFirestore in Frameworks */,
 				5E8C01982A55F9D3008408EB /* FirebaseAuth in Frameworks */,
+				5E8C01AD2A57CACB008408EB /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,14 +94,13 @@
 			children = (
 				5E8C019D2A55FD05008408EB /* GoogleService-Info.plist */,
 				5E8C01842A4FDBC5008408EB /* TinderClone4App.swift */,
-				5E8C01A82A562D16008408EB /* ImagePicker.swift */,
-				5E8C01922A4FDC95008408EB /* LoginView.swift */,
 				5E8C01862A4FDBC5008408EB /* ContentView.swift */,
-				5E8C019F2A55FE64008408EB /* AuthView.swift */,
+				5E8C01BB2A58D108008408EB /* OnBoarding */,
+				5E8C01AE2A58637E008408EB /* CardSwipe */,
+				5E8C01C32A5B293D008408EB /* MatchesView */,
 				5E8C01882A4FDBC7008408EB /* Assets.xcassets */,
+				5E8C01B52A586CC4008408EB /* IMG_5263.JPG */,
 				5E8C018A2A4FDBC7008408EB /* Preview Content */,
-				5E8C01A12A55FEBC008408EB /* SignupView.swift */,
-				5E8C01A32A56114F008408EB /* UserInfo.swift */,
 			);
 			path = TinderClone4;
 			sourceTree = "<group>";
@@ -101,6 +118,39 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E8C01AE2A58637E008408EB /* CardSwipe */ = {
+			isa = PBXGroup;
+			children = (
+				5E8C01B12A5863C4008408EB /* CardView.swift */,
+				5E8C01C82A5B35AA008408EB /* NavigationSection.swift */,
+				5E8C01BE2A58D407008408EB /* RightSwipe.swift */,
+				5E8C01B32A586424008408EB /* Card.swift */,
+				5E8C01B72A58ADFD008408EB /* CardsSection.swift */,
+				5E8C01B92A58BA83008408EB /* RetrieveUser.swift */,
+			);
+			path = CardSwipe;
+			sourceTree = "<group>";
+		};
+		5E8C01BB2A58D108008408EB /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				5E8C01A12A55FEBC008408EB /* SignupView.swift */,
+				5E8C01922A4FDC95008408EB /* LoginView.swift */,
+				5E8C019F2A55FE64008408EB /* AuthView.swift */,
+				5E8C01A32A56114F008408EB /* UserInfo.swift */,
+				5E8C01AA2A57CA4E008408EB /* ImageUpload.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		5E8C01C32A5B293D008408EB /* MatchesView */ = {
+			isa = PBXGroup;
+			children = (
+				5E8C01C02A593D91008408EB /* MatchesView.swift */,
+			);
+			path = MatchesView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +175,7 @@
 				5E8C01992A55F9D3008408EB /* FirebaseDatabase */,
 				5E8C019B2A55F9D3008408EB /* FirebaseDatabaseSwift */,
 				5E8C01A62A5629BB008408EB /* FirebaseFirestore */,
+				5E8C01AC2A57CACB008408EB /* FirebaseStorage */,
 			);
 			productName = TinderClone4;
 			productReference = 5E8C01812A4FDBC5008408EB /* TinderClone4.app */;
@@ -174,6 +225,7 @@
 				5E8C018C2A4FDBC7008408EB /* Preview Assets.xcassets in Resources */,
 				5E8C01892A4FDBC7008408EB /* Assets.xcassets in Resources */,
 				5E8C019E2A55FD06008408EB /* GoogleService-Info.plist in Resources */,
+				5E8C01B62A586CC4008408EB /* IMG_5263.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,11 +237,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E8C01932A4FDC95008408EB /* LoginView.swift in Sources */,
+				5E8C01B22A5863C4008408EB /* CardView.swift in Sources */,
+				5E8C01C12A593D91008408EB /* MatchesView.swift in Sources */,
+				5E8C01BA2A58BA83008408EB /* RetrieveUser.swift in Sources */,
 				5E8C01872A4FDBC5008408EB /* ContentView.swift in Sources */,
 				5E8C01A02A55FE64008408EB /* AuthView.swift in Sources */,
-				5E8C01A92A562D16008408EB /* ImagePicker.swift in Sources */,
+				5E8C01AB2A57CA4E008408EB /* ImageUpload.swift in Sources */,
+				5E8C01C92A5B35AA008408EB /* NavigationSection.swift in Sources */,
 				5E8C01852A4FDBC5008408EB /* TinderClone4App.swift in Sources */,
+				5E8C01B42A586424008408EB /* Card.swift in Sources */,
 				5E8C01A42A56114F008408EB /* UserInfo.swift in Sources */,
+				5E8C01BF2A58D407008408EB /* RightSwipe.swift in Sources */,
+				5E8C01B82A58ADFD008408EB /* CardsSection.swift in Sources */,
 				5E8C01A22A55FEBC008408EB /* SignupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +487,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5E8C01942A55F9D3008408EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		5E8C01AC2A57CACB008408EB /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5E8C01942A55F9D3008408EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

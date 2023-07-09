@@ -15,17 +15,19 @@ struct ContentView: View {
     
     @State private var navigateToUserInfo = false
     
+    
     var body: some View {
         
         if userID == "" {
             AuthView()
         } else if userInfoBool == false {
             UserInfo()
-            
         } else {
-            Text("Logged In! \nYour user id is \(userID)")
+            //NavigationSection()
+            CardsSection()
             
             Button(action: {
+                userInfoBool = false
                 let firebaseAuth = Auth.auth()
                 do {
                     try firebaseAuth.signOut()
