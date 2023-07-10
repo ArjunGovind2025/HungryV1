@@ -170,3 +170,32 @@ func searchUsersByUID(uids: [String], completion: @escaping ([Card]) -> Void) {
         completion(cards)
     }
 }
+
+func retrieveCard(forUserID userID: String, completion: @escaping (Card?) -> Void) {
+    let db = Firestore.firestore()
+    let userRef = db.collection("users").document(userID)
+    
+    userRef.getDocument { documentSnapshot, error in
+        if let error = error {
+            print("Error retrieving document for userID \(userID): \(error.localizedDescription)")
+            completion(nil)
+            return
+        }
+        
+        guard let data = documentSnapshot?.data(),
+              let name = data["name"] as? String,
+              let imageName = data["imageName"] as? String,
+              let age = data["age"] as? Int,
+              let bio = data["bio"] as? String else {
+            print("Invalid data for userID \(userID)")
+            completion(nil)
+            return
+        }
+        
+        loadImage(withURL: imageName) { image in
+            let card = Card(id: userID, name: name, imageName: imageName, image: image, age: age, bio: bio)
+            completion(card)
+        }
+    }
+}
+
