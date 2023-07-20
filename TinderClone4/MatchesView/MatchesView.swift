@@ -13,46 +13,51 @@ struct MatchesView: View {
     // State variables
     @State private var currentUserID: String? = nil
     @State private var fetchedMatchedUsers: [String] = []
-    @State private var cards: [Card] = []
+    @State public var cards: [Card] = []
 
     var body: some View {
-        VStack {
-            Text("Matched Users")
-                .font(.title)
-                .fontWeight(.bold)
+        NavigationView {
+            VStack {
+                Text("Matched Users")
+                    .font(.title)
+                    .fontWeight(.bold)
 
-            ScrollView(.horizontal) {
-                LazyHStack(spacing: 16) {
-                    ForEach(cards, id: \.id) { card in
-                        VStack(spacing: 8) {
-                            if let image = card.image {
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 200, height: 200)
-                                    .cornerRadius(8)
-                            } else {
-                                // Handle the case when the image is not available
-                                Color.gray
-                                    .frame(width: 200, height: 200)
-                                    .cornerRadius(8)
+                ScrollView(.horizontal) {
+                    LazyHStack(spacing: 16) {
+                        ForEach(cards, id: \.id) { card in
+                            VStack(spacing: 8) {
+                                if let image = card.image {
+                                    Image(uiImage: image)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 200, height: 350)
+                                        .cornerRadius(8)
+                                } else {
+                                    // Handle the case when the image is not available
+                                    Color.gray
+                                        .frame(width: 200, height: 200)
+                                        .cornerRadius(8)
+                                }
+
+                                VStack(alignment: .leading) {
+                                    Text(card.name)
+                                        .font(.title)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.black)
+                                    Text("\(card.age)")
+                                        .font(.subheadline)
+                                        .foregroundColor(.gray)
+                                }
+                                .padding(.horizontal)
+                                .foregroundColor(.white)
                             }
-                            
-                            VStack(alignment: .leading) {
-                                Text(card.name)
-                                    .font(.title)
-                                    .fontWeight(.bold)
-                                Text("\(card.age)")
-                                    .font(.subheadline)
-                                    .foregroundColor(.gray)
-                            }
-                            .padding(.horizontal)
-                            .foregroundColor(.white)
                         }
                     }
+                    .padding(.horizontal, 16)
                 }
-                .padding(.horizontal, 16)
             }
+            .navigationBarBackButtonHidden(true)
+
         }
         .onAppear {
             // Fetch matched users on view appear
@@ -110,7 +115,7 @@ struct MatchesView: View {
                 }
 
                 let data = document.data()
-                
+
                 if let name = data["firstname"] as? String,
                    let imageName = data["image_url"] as? String,
                    let bio = data["about"] as? String {
@@ -129,14 +134,15 @@ struct MatchesView: View {
             }
         }
     }
-}
 
+}
 
 struct MatchesView_Previews: PreviewProvider {
     static var previews: some View {
         MatchesView()
     }
 }
+
 
 
 

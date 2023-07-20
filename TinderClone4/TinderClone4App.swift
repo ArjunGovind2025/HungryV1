@@ -7,11 +7,17 @@
 
 
 import SwiftUI
+import Firebase
 import FirebaseCore
+
 
 
 @main
 struct SwiftUI_AuthApp: App {
+    
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        Database.database().reference()
+    }
     
     init() {
         FirebaseApp.configure()
@@ -23,3 +29,4 @@ struct SwiftUI_AuthApp: App {
         }
     }
 }
+

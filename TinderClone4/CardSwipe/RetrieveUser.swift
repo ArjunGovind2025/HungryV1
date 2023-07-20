@@ -65,7 +65,7 @@ func loadImage(withURL url: String, completion: @escaping (UIImage?) -> Void) {
     let storage = Storage.storage()
     let storageRef = storage.reference(forURL: url)
     
-    storageRef.getData(maxSize: 5 * 1024 * 1024) { (data, error) in
+    storageRef.getData(maxSize: 10 * 1024 * 1024) { (data, error) in
         guard let data = data, error == nil else {
             print("Error loading image: \(error?.localizedDescription ?? "")")
             completion(nil)

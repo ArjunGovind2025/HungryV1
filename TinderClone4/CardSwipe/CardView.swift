@@ -9,12 +9,15 @@ import SwiftUI
 
 struct CardView: View {
     @State var card: Card
-    // MARK: - Drawing Constant
+    @SceneStorage("HungryMode") var HungryMode: Bool = false
+    @State private var isMatched = true
+
     let cardGradient = Gradient(colors: [Color.black.opacity(0.0), Color.black.opacity(0.5)])
     
     var body: some View {
-        VStack {
-            NavigationSection()
+        VStack { 
+            //SearchBarView()
+            //NavigationSection()
             
             ZStack(alignment: .topLeading) {
                 if let image = card.image {
@@ -22,34 +25,24 @@ struct CardView: View {
                         .resizable()
                         .clipped()
                 }
-                // Linear Gradient
+    
                 LinearGradient(gradient: cardGradient, startPoint: .top, endPoint: .bottom)
                 VStack {
                     Spacer()
-                    VStack(alignment: .leading){
+                    VStack(alignment: .leading) {
                         HStack {
-                            Text(card.name).font(.largeTitle).fontWeight(.bold)
-                            Text(String(card.age)).font(.title)
+                            Text(card.name)
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                            Text(String(card.age))
+                                .font(.title)
                         }
-                        Text(card.bio).font(.body)
+                        Text(card.bio)
+                            .font(.body)
                     }
                 }
                 .padding()
                 .foregroundColor(.white)
-                
-                HStack {
-                    Image("yes")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width:150)
-                        .opacity(Double(card.x/10 - 1))
-                    Spacer()
-                    Image("nope")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width:150)
-                        .opacity(Double(card.x/10 * -1 - 1))
-                }
             }
             .cornerRadius(8)
             .offset(x: card.x, y: card.y)
@@ -59,7 +52,6 @@ struct CardView: View {
                     .onChanged { value in
                         withAnimation(.default) {
                             card.x = value.translation.width
-                            // MARK: - BUG 5
                             card.y = value.translation.height
                             card.degree = 7 * (value.translation.width > 0 ? 1 : -1)
                         }
@@ -76,6 +68,9 @@ struct CardView: View {
                                     if let error = error {
                                         print("Error swiping right: \(error.localizedDescription)")
                                     } else {
+                                        if isMatched {
+                                            AlertView(message: "It's a match!", isPresented: $isMatched)
+                                                        }
                                         print("Swiped right successfully!")
                                     }
                                 }
@@ -89,9 +84,28 @@ struct CardView: View {
                         }
                     }
             )
+
+            
+            Button(action: {
+                HungryMode = true
+            }) {
+                Text("Hungry")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(8)
+            }
+            .padding(.bottom, 16)
         }
-    }
+        .padding(.bottom, 40)
+        //NavigationSection()
+            
+        
+        }
 }
+
 
 
 

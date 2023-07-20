@@ -1,14 +1,14 @@
-//
-//  NavigationSection.swift
-//  TinderClone4
-//
-//  Created by Arjun Govind on 7/9/23.
-//
-
 import SwiftUI
 
-struct NavigationSection: View {
-    @Binding var activeTab: ContentView.Tab
+struct NavigationSect: View {
+    @State private var selectedTab: Tab = .profile
+    
+    enum Tab {
+        case profile
+        case swipe
+        case matches
+        case search
+    }
     
     var body: some View {
         VStack(spacing: 0) {
@@ -25,27 +25,22 @@ struct NavigationSection: View {
         }
     }
     
-    func tabButton(title: String, image: String, tab: ContentView.Tab) -> some View {
+    @ViewBuilder
+    func tabButton(title: String, image: String, tab: Tab) -> some View {
         Button(action: {
-            activeTab = tab
+            selectedTab = tab
         }) {
             VStack(spacing: 4) {
                 Image(systemName: image)
                     .font(.system(size: 24))
-                    .foregroundColor(activeTab == tab ? .blue : .gray)
+                    .foregroundColor(selectedTab == tab ? .blue : .gray)
                 Text(title)
                     .font(.caption)
-                    .foregroundColor(activeTab == tab ? .blue : .gray)
+                    .foregroundColor(selectedTab == tab ? .blue : .gray)
             }
             .frame(maxWidth: .infinity)
         }
     }
 }
-
-/**struct NavigationSection_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationSection()
-    }
-}*/
 
 

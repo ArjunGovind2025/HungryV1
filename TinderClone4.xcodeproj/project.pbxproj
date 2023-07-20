@@ -31,6 +31,15 @@
 		5E8C01BF2A58D407008408EB /* RightSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01BE2A58D407008408EB /* RightSwipe.swift */; };
 		5E8C01C12A593D91008408EB /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01C02A593D91008408EB /* MatchesView.swift */; };
 		5E8C01C92A5B35AA008408EB /* NavigationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01C82A5B35AA008408EB /* NavigationSection.swift */; };
+		5E8C01CB2A5DE4B9008408EB /* HungryModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01CA2A5DE4B9008408EB /* HungryModeView.swift */; };
+		5E8C01CD2A5DE7A9008408EB /* SwipeModeNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01CC2A5DE7A9008408EB /* SwipeModeNavigation.swift */; };
+		5E8C01D62A5DF248008408EB /* FetchUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01D52A5DF248008408EB /* FetchUsers.swift */; };
+		5E8C01D82A5F0381008408EB /* Test UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01D72A5F0381008408EB /* Test UI.swift */; };
+		5E8C01DA2A60537A008408EB /* HungrySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01D92A60537A008408EB /* HungrySection.swift */; };
+		5E8C01DC2A606966008408EB /* HungryRightSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01DB2A606966008408EB /* HungryRightSwipe.swift */; };
+		5E8C01DE2A65ADC7008408EB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01DD2A65ADC7008408EB /* AlertView.swift */; };
+		5E8C01E02A65C56A008408EB /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C01DF2A65C569008408EB /* SearchBar.swift */; };
+		5EDCCACD2A67998E00901952 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCCACC2A67998E00901952 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +62,15 @@
 		5E8C01BE2A58D407008408EB /* RightSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSwipe.swift; sourceTree = "<group>"; };
 		5E8C01C02A593D91008408EB /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
 		5E8C01C82A5B35AA008408EB /* NavigationSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSection.swift; sourceTree = "<group>"; };
+		5E8C01CA2A5DE4B9008408EB /* HungryModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungryModeView.swift; sourceTree = "<group>"; };
+		5E8C01CC2A5DE7A9008408EB /* SwipeModeNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeModeNavigation.swift; sourceTree = "<group>"; };
+		5E8C01D52A5DF248008408EB /* FetchUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUsers.swift; sourceTree = "<group>"; };
+		5E8C01D72A5F0381008408EB /* Test UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Test UI.swift"; sourceTree = "<group>"; };
+		5E8C01D92A60537A008408EB /* HungrySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungrySection.swift; sourceTree = "<group>"; };
+		5E8C01DB2A606966008408EB /* HungryRightSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungryRightSwipe.swift; sourceTree = "<group>"; };
+		5E8C01DD2A65ADC7008408EB /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		5E8C01DF2A65C569008408EB /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		5EDCCACC2A67998E00901952 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +112,7 @@
 			children = (
 				5E8C019D2A55FD05008408EB /* GoogleService-Info.plist */,
 				5E8C01842A4FDBC5008408EB /* TinderClone4App.swift */,
+				5E8C01DF2A65C569008408EB /* SearchBar.swift */,
 				5E8C01862A4FDBC5008408EB /* ContentView.swift */,
 				5E8C01BB2A58D108008408EB /* OnBoarding */,
 				5E8C01AE2A58637E008408EB /* CardSwipe */,
@@ -101,6 +120,7 @@
 				5E8C01882A4FDBC7008408EB /* Assets.xcassets */,
 				5E8C01B52A586CC4008408EB /* IMG_5263.JPG */,
 				5E8C018A2A4FDBC7008408EB /* Preview Content */,
+				5EDCCACC2A67998E00901952 /* ProfileView.swift */,
 			);
 			path = TinderClone4;
 			sourceTree = "<group>";
@@ -123,12 +143,16 @@
 		5E8C01AE2A58637E008408EB /* CardSwipe */ = {
 			isa = PBXGroup;
 			children = (
-				5E8C01B12A5863C4008408EB /* CardView.swift */,
 				5E8C01C82A5B35AA008408EB /* NavigationSection.swift */,
 				5E8C01BE2A58D407008408EB /* RightSwipe.swift */,
+				5E8C01DD2A65ADC7008408EB /* AlertView.swift */,
+				5E8C01CE2A5DEB71008408EB /* HungryMode */,
 				5E8C01B32A586424008408EB /* Card.swift */,
+				5E8C01B12A5863C4008408EB /* CardView.swift */,
+				5E8C01D72A5F0381008408EB /* Test UI.swift */,
 				5E8C01B72A58ADFD008408EB /* CardsSection.swift */,
 				5E8C01B92A58BA83008408EB /* RetrieveUser.swift */,
+				5E8C01CC2A5DE7A9008408EB /* SwipeModeNavigation.swift */,
 			);
 			path = CardSwipe;
 			sourceTree = "<group>";
@@ -149,8 +173,19 @@
 			isa = PBXGroup;
 			children = (
 				5E8C01C02A593D91008408EB /* MatchesView.swift */,
+				5E8C01D52A5DF248008408EB /* FetchUsers.swift */,
 			);
 			path = MatchesView;
+			sourceTree = "<group>";
+		};
+		5E8C01CE2A5DEB71008408EB /* HungryMode */ = {
+			isa = PBXGroup;
+			children = (
+				5E8C01CA2A5DE4B9008408EB /* HungryModeView.swift */,
+				5E8C01DB2A606966008408EB /* HungryRightSwipe.swift */,
+				5E8C01D92A60537A008408EB /* HungrySection.swift */,
+			);
+			path = HungryMode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,19 +271,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E8C01DC2A606966008408EB /* HungryRightSwipe.swift in Sources */,
 				5E8C01932A4FDC95008408EB /* LoginView.swift in Sources */,
+				5E8C01DE2A65ADC7008408EB /* AlertView.swift in Sources */,
+				5E8C01CD2A5DE7A9008408EB /* SwipeModeNavigation.swift in Sources */,
+				5E8C01D82A5F0381008408EB /* Test UI.swift in Sources */,
 				5E8C01B22A5863C4008408EB /* CardView.swift in Sources */,
+				5E8C01CB2A5DE4B9008408EB /* HungryModeView.swift in Sources */,
 				5E8C01C12A593D91008408EB /* MatchesView.swift in Sources */,
 				5E8C01BA2A58BA83008408EB /* RetrieveUser.swift in Sources */,
+				5E8C01E02A65C56A008408EB /* SearchBar.swift in Sources */,
 				5E8C01872A4FDBC5008408EB /* ContentView.swift in Sources */,
 				5E8C01A02A55FE64008408EB /* AuthView.swift in Sources */,
 				5E8C01AB2A57CA4E008408EB /* ImageUpload.swift in Sources */,
+				5E8C01DA2A60537A008408EB /* HungrySection.swift in Sources */,
 				5E8C01C92A5B35AA008408EB /* NavigationSection.swift in Sources */,
 				5E8C01852A4FDBC5008408EB /* TinderClone4App.swift in Sources */,
 				5E8C01B42A586424008408EB /* Card.swift in Sources */,
+				5EDCCACD2A67998E00901952 /* ProfileView.swift in Sources */,
 				5E8C01A42A56114F008408EB /* UserInfo.swift in Sources */,
 				5E8C01BF2A58D407008408EB /* RightSwipe.swift in Sources */,
 				5E8C01B82A58ADFD008408EB /* CardsSection.swift in Sources */,
+				5E8C01D62A5DF248008408EB /* FetchUsers.swift in Sources */,
 				5E8C01A22A55FEBC008408EB /* SignupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

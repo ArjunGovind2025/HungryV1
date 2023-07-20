@@ -1,13 +1,16 @@
-// RightSwipe.swift
-// TinderClone4
 //
-// Created by Arjun Govind on 7/7/23.
+//  HungryRightSwipe.swift
+//  TinderClone4
+//
+//  Created by Arjun Govind on 7/13/23.
+//
+
 
 import Foundation
 import Firebase
 
 
-func rightSwipe(swipedProfileID: String, completion: @escaping (Error?) -> Void) {
+func hungryRightSwipe(swipedProfileID: String, completion: @escaping (Error?) -> Void) {
     guard let currentUserID = Auth.auth().currentUser?.uid else {
         completion(nil)
         return
@@ -40,7 +43,6 @@ func rightSwipe(swipedProfileID: String, completion: @escaping (Error?) -> Void)
         if let swipedUserLikes = swipedUserDoc["likes"] as? [String],
            swipedUserLikes.contains(currentUserID) {
             print("FOUND MATCH")
-            
             print(swipedUserLikes)
             
             // Update likes and matches of current user
@@ -48,9 +50,6 @@ func rightSwipe(swipedProfileID: String, completion: @escaping (Error?) -> Void)
                               "matches": FieldValue.arrayUnion([swipedProfileID])], forDocument: currentUserRef)
             // Update matches of swiped user
             batch.updateData(["matches": FieldValue.arrayUnion([currentUserID])], forDocument: swipedUserRef)
-            
-            // Set isMatched value in UserDefaults
-            UserDefaults.standard.set(true, forKey: "isMatched")
         } else {
             // Update likes of current user
             print("ONLY ONEWAY LIKE")
@@ -73,7 +72,6 @@ func rightSwipe(swipedProfileID: String, completion: @escaping (Error?) -> Void)
         }
     }
 }
-
 
 
 
